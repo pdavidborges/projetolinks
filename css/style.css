@@ -1,0 +1,143 @@
+/*
+CSS RESET
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*/
+
+
+:root{
+    --primary: #225C72;
+    --contrast: #162C41;
+    --secondary: #2775A6;
+    --gray: #666666;
+    --gray-light: #EEEEEE;
+}
+
+body{
+    height: 100vh; /*VH -> (View Height) Unidade de medida relacionada à tela/browser*/
+    margin: 0;
+    background-color: var(--primary);
+    /*background-image: url(../img/bg.jpg);*/
+    background-image: linear-gradient(var(--primary), var(--contrast));
+    font-family: 'Roboto', sans-serif;    
+    overflow: hidden; /*esconde a barra de rolagem*/
+}
+
+div{
+    width: 70%; /*Largura*/    
+    max-width: 340px; /*largura máxima (400 - 60 do padding)*/
+    height: auto; /*altura*/
+    background-color: var(--gray-light);
+    /*margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;*/
+    margin: 50px auto; /*espaçamento externo -> vertical(top/bottom) horizontal (right/left)*/
+    padding: 30px; /*espaçamento interno*/
+    text-align: center;
+    border-radius: 10px;
+}
+
+img{
+    width: 100px;    
+    border-radius: 50%;    
+    border: solid 5px var(--primary);
+    /*border-width: 5px;
+    border-color: var(--primary);
+    border-style: solid;*/    
+}
+
+h1{
+    font-size: 32px;
+    /*font-weight: bold;*/
+    color: var(--contrast);
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+h2{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--secondary);
+    font-size: 20px;
+}
+
+p{
+    margin-top: 10px;
+    color: var(--gray);    
+}
+
+ul{    
+    padding: 0;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    list-style-type: none;
+}
+
+li{    
+    margin-bottom: 5px;   
+}
+
+#app{
+    display: none;
+}
+
+a{
+    color: var(--primary);
+}
+
+ul a{
+    background-color: var(--primary);    
+    color: white;
+    display: block;
+    text-decoration: none;
+    /*padding-top: 10px;
+    padding-bottom: 10px;*/
+    padding: 10px 0;
+    border-radius: 3px;
+}
+
+/*ao passar o mouse*/
+ul a:hover{
+    background-color: var(--contrast);
+}
+
+
+/*Media Query*/
+
+@media (max-width: 768px){
+
+    #app{
+        display: block;
+    }
+
+    body{
+        overflow: auto; /*habilita a barra de rolagem do body*/
+    }
+
+}
+
+@media (max-width: 414px){
+
+    img{
+        width: 80px;
+    }
+
+    h1{
+        font-size: 28px;
+    }
+}
+
+
+/*
+Elementos inline
+    Dividem a mesma linha
+    https://developer.mozilla.org/pt-BR/docs/Web/HTML/Inline_elements   
+
+Elementos block
+    Ocupam a linha inteira
+    https://developer.mozilla.org/pt-BR/docs/Web/HTML/Block-level_elements
+*/
